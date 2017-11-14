@@ -1,7 +1,6 @@
 FROM amazonlinux
 
-RUN yum remove httpd* php* \
-    && yum update -y \
+RUN yum update -y \
     && yum install -y httpd \
     && chkconfig httpd on
 
